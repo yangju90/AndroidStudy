@@ -14,5 +14,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, getClass().getSimpleName() + " " + getTaskId());
+        Log.d("LOG_SHOW", String.valueOf(BuildConfig.LOG_SHOW));
     }
 }
