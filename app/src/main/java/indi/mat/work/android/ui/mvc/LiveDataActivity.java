@@ -27,6 +27,7 @@ public class LiveDataActivity extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_live_data);
         liveDataViewModel = new ViewModelProvider(this).get(LiveDataViewModel.class);
         liveDataViewModel = new ViewModelProvider(this, new SavedStateVMFactory(this)).get(LiveDataViewModel.class);
+        
 
         Log.d(TAG, "onCreate: " + liveDataViewModel.getLikedNumber());
 
