@@ -10,6 +10,11 @@ public class LiveDataViewModel extends ViewModel {
         this.likedNumber = new MutableLiveData<>();
         this.likedNumber.setValue(new Integer(20));
     }
+    
+    public LiveDataViewModel(SavedStateHandle handle) {
+        this.likedNumber = new MutableLiveData<>();
+        this.likedNumber.setValue(new Integer(20));
+    }
 
     public MutableLiveData<Integer> getLikedNumber() {
         return likedNumber;
