@@ -15,8 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import indi.mat.work.android.ui.component.ComponentExampleActivity;
+import indi.mat.work.android.ui.drawer.DrawerLayoutActivity;
 import indi.mat.work.android.ui.intent.IntentActivity;
 import indi.mat.work.android.ui.mvc.LiveDataActivity;
+import indi.mat.work.android.ui.toolbar.ToolBarActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -65,6 +67,16 @@ public class MainActivity extends BaseActivity {
     public void clickToLiveDataActivity(View view){
         LiveDataActivity.actionStart(this, "", "");
         Log.d(TAG, "clickToComponentExampleActivity: Jumped to!");
+    }
+
+    public void clickToToolBarActivity(View view){
+        ToolBarActivity.actionStart(this, "", "");
+        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
+    }
+
+    public void clickToDrawerLayoutActivity(View view){
+        DrawerLayoutActivity.actionStart(this, "", "");
+        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
     }
 
     // Activity 回收时调用，没有测试出调用的逻辑

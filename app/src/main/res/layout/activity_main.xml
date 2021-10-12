@@ -131,6 +131,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
     <Button
         android:id="@+id/live_data"
         android:layout_width="0dp"
@@ -141,4 +148,26 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+    <Button
+        android:id="@+id/ToolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickToToolBarActivity"
+        android:text="@string/main_tool_bar_button"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/guideline36" />
+
+    <Button
+        android:id="@+id/drawer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickToDrawerLayoutActivity"
+        android:text="@string/mian_drawer_layout_button"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline36" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,4 +43,7 @@
     <string name="live_data_button_up">up</string>
     <string name="live_data_button_down">down</string>
     <string name="main_live_data">ViewModel展示</string>
+    <string name="main_tool_bar_button">ToolBar样例</string>
+    <string name="mian_drawer_layout_button">DrawerLayout</string>
+    <string name="drawer_layout">滑动菜单</string>
 </resources>

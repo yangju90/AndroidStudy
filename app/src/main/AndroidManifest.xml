@@ -11,8 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy">
         <activity
+            android:name=".ui.drawer.DrawerLayoutActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".ui.toolbar.ToolBarActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
+        <activity
             android:name=".ui.mvc.LiveDataActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="indi.mat.work.android.ui.mvc.LIVE_DATA_START" />
 
