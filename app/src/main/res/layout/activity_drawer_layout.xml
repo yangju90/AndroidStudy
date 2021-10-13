@@ -22,11 +22,11 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:logo="@drawable/apple"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:logo="@drawable/apple"
                 app:menu="@menu/draw_layout_menu"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:title="Drawer_Layout样例">
