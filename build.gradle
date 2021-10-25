@@ -1,5 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+
+    ext {
+
+        // App dependencies
+        gsonVersion = '2.8.2'
+        okhttpLoggingVersion = '4.7.2'
+        retrofitVersion = '2.9.0'
+    }
+
     repositories {
         mavenLocal()
         google()
