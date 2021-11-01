@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy">
         <activity
+            android:name=".ui.launchmode.MainLaunchModeActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.drawer.DrawerLayoutActivity"
             android:exported="true"
             android:theme="@style/AppTheme"/>
