@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import indi.mat.work.android.ui.component.ComponentExampleActivity;
 import indi.mat.work.android.ui.drawer.DrawerLayoutActivity;
 import indi.mat.work.android.ui.intent.IntentActivity;
+import indi.mat.work.android.ui.launchmode.MainLaunchModeActivity;
 import indi.mat.work.android.ui.mvc.LiveDataActivity;
 import indi.mat.work.android.ui.toolbar.ToolBarActivity;
 
@@ -78,6 +79,12 @@ public class MainActivity extends BaseActivity {
         DrawerLayoutActivity.actionStart(this, "", "");
         Log.d(TAG, "clickToToolBarActivity: Jumped to!");
     }
+
+    public void clickToLaunchModeActivity(View view){
+        MainLaunchModeActivity.actionStart(this, "", "");
+        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
+    }
+
 
     // Activity 回收时调用，没有测试出调用的逻辑
     @Override
@@ -148,7 +155,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: ");
+        Log.d(TAG, "onResume: =======================" + getTaskId());
     }
 
     @Override

@@ -1,4 +1,4 @@
-package indi.mat.work.android.ui.launchmode;
+package indi.mat.work.android.ui.launchmode.singletask;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,26 +8,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toolbar;
 
 import indi.mat.work.android.R;
-import indi.mat.work.android.ui.launchmode.singletask.SingleTaskFirstActivity;
+import indi.mat.work.android.ui.launchmode.MainLaunchModeActivity;
+import indi.mat.work.android.ui.launchmode.singletask.other.SingleTaskOtherActivity;
 
-public class MainLaunchModeActivity extends AppCompatActivity {
+public class SingleTaskSecondActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainLaunchModeActivity";
+    private static final String TAG = "SingleTaskSecondActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_launch_mode);
+        setContentView(R.layout.activity_single_task_second);
+
+        if(getIntent().getStringExtra("value1").length() != 0){
+            SingleTaskOtherActivity.actionStart(this, "", "");
+        }
+
+
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        Log.d(TAG, "onCreate: MainLaunchModeActivity ");
-        Log.d(TAG, "创建 主页");
-
+        Log.d(TAG, "创建 第二页");
         int taskId = getTaskId();
         Log.i(TAG, TAG +"所在的任务的id为: =======================" +  taskId);
     }
@@ -39,12 +43,12 @@ public class MainLaunchModeActivity extends AppCompatActivity {
     }
 
     public void next(View view){
-        SingleTaskFirstActivity.actionStart(this, "", "");
-        Log.d(TAG, "next: Jumped to! 第一页");
+        SingleTaskThirdActivity.actionStart(this, "", "");
+        Log.d(TAG, "next: Jumped to! 第三页");
     }
 
     public static void actionStart(Context context, String value1, String value2) {
-        Intent intent = new Intent(context, MainLaunchModeActivity.class);
+        Intent intent = new Intent(context, SingleTaskSecondActivity.class);
         intent.putExtra("value1", value1);
         intent.putExtra("value2", value2);
         context.startActivity(intent);
@@ -77,7 +81,7 @@ public class MainLaunchModeActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: SingleTask 主页");
+        Log.d(TAG, "onDestroy:  SingleTask 第二页");
     }
 
     @Override

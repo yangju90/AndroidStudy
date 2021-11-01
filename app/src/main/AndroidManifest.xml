@@ -11,16 +11,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy">
         <activity
+            android:name=".ui.launchmode.singletask.other.SingleTaskOtherActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.launchmode.singletask.SingleTaskThirdActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.launchmode.singletask.SingleTaskSecondActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.launchmode.singletask.SingleTaskFirstActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
             android:name=".ui.launchmode.MainLaunchModeActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTask" />
         <activity
             android:name=".ui.drawer.DrawerLayoutActivity"
             android:exported="true"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.toolbar.ToolBarActivity"
             android:exported="true"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.mvc.LiveDataActivity"
             android:exported="true">
