@@ -7,3 +7,6 @@ https://www.jianshu.com/p/99212c2e0308
 
 # Android ActionBar和ToolBar的使用 
 https://www.jianshu.com/p/81d0bcb282cb
+
+# Android样式
+https://www.runoob.com/w3cnote/android-tutorial-linearlayout.html
