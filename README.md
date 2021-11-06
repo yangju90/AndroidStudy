@@ -10,3 +10,6 @@ https://www.jianshu.com/p/81d0bcb282cb
 
 # Android样式
 https://www.runoob.com/w3cnote/android-tutorial-linearlayout.html
+
+# Java内存泄漏
+https://www.bilibili.com/read/cv5593533/
