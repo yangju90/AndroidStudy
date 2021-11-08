@@ -37,7 +37,7 @@ public class SingleTaskFirstActivity extends AppCompatActivity {
 
 
     public void next(View view){
-        SingleTaskSecondActivity.actionStart(this, "", "");
+        SingleTaskSecondActivity.actionStart(this, "false", "PLC_NEXT");
         Log.d(TAG, "next: Jumped to! 第二页");
     }
 

@@ -1,16 +1,22 @@
 package indi.mat.work.android.ui.launchmode.singletask;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import indi.mat.work.android.R;
-import indi.mat.work.android.ui.launchmode.MainLaunchModeActivity;
 import indi.mat.work.android.ui.launchmode.singletask.other.SingleTaskOtherActivity;
 
 public class SingleTaskSecondActivity extends AppCompatActivity {
@@ -22,8 +28,15 @@ public class SingleTaskSecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_task_second);
 
-        if(getIntent().getStringExtra("value1").length() != 0){
-            SingleTaskOtherActivity.actionStart(this, "", "");
+        if("true".equals(getIntent().getStringExtra("value1"))){
+//            SingleTaskOtherActivity.actionStart(this, "", "");
+            Intent intent = new Intent();
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if(result.getResultCode() == -100) finish();
+                }
+            }).launch(new Intent(this, SingleTaskOtherActivity.class));
         }
 
 
@@ -33,7 +46,12 @@ public class SingleTaskSecondActivity extends AppCompatActivity {
         }
         Log.d(TAG, "创建 第二页");
         int taskId = getTaskId();
-        Log.i(TAG, TAG +"所在的任务的id为: =======================" +  taskId);
+        Log.d(TAG, TAG +"所在的任务的id为: =======================" +  taskId);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -55,6 +73,14 @@ public class SingleTaskSecondActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        System.out.println("value1:" + intent.getStringExtra("value1"));
+        System.out.println("value2:" + intent.getStringExtra("value2"));
+        setIntent(intent);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart: ");
@@ -63,7 +89,17 @@ public class SingleTaskSecondActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: =======================" + getTaskId());
+        TextView editText = findViewById(R.id.intentValue);
+        if("true".equals(getIntent().getStringExtra("value1"))) {
+
+        }else{
+            if (getIntent().getStringExtra("value2") == null || getIntent().getStringExtra("value2").length() == 0) {
+                finish();
+            }
+            editText.setText("content: " + getIntent().getStringExtra("value2"));
+        }
+
+        Log.d(TAG, "onResume: =======================");
     }
 
     @Override

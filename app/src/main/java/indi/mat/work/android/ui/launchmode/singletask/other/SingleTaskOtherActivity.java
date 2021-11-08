@@ -32,12 +32,13 @@ public class SingleTaskOtherActivity extends AppCompatActivity {
     }
     @Override
     public boolean onSupportNavigateUp() {
+        setResult(-100);
         finish();
         return super.onSupportNavigateUp();
     }
 
     public void next(View view){
-        SingleTaskSecondActivity.actionStart(this, "", "");
+        SingleTaskSecondActivity.actionStart(this, "", "PLC_OTHER");
         Log.d(TAG, "next: Jumped to! 第二页");
     }
 
