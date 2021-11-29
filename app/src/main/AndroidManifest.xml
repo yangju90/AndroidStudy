@@ -11,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy">
         <activity
+            android:name=".ui.lifecycles.LifecyclesActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.launchmode.singletask.other.SingleTaskOtherActivity"
             android:exported="true"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".ui.launchmode.singletask.SingleTaskThirdActivity"
             android:exported="true"

@@ -18,6 +18,7 @@ import indi.mat.work.android.ui.component.ComponentExampleActivity;
 import indi.mat.work.android.ui.drawer.DrawerLayoutActivity;
 import indi.mat.work.android.ui.intent.IntentActivity;
 import indi.mat.work.android.ui.launchmode.MainLaunchModeActivity;
+import indi.mat.work.android.ui.lifecycles.LifecyclesActivity;
 import indi.mat.work.android.ui.mvc.LiveDataActivity;
 import indi.mat.work.android.ui.toolbar.ToolBarActivity;
 
@@ -86,7 +87,14 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    public void clickToLifecyclesActivity(View view){
+        LifecyclesActivity.actionStart(this, "", "");
+        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
+    }
+
+
     // Activity 回收时调用，没有测试出调用的逻辑
+    // 模拟器设置，杀死后台App，当Activity点击Home键时调用
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
