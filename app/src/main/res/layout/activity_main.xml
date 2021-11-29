@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="clickToRoomActivity"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -145,6 +146,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.68" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61" />
+
     <Button
         android:id="@+id/live_data"
         android:layout_width="0dp"
@@ -188,6 +196,18 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintStart_toStartOf="@+id/guideline16"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <Button
+        android:id="@+id/room"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickToRoomActivity"
+        android:text="Room"
+        app:layout_constraintBottom_toTopOf="@+id/guideline38"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/guideline38"
         app:layout_constraintVertical_bias="0.437" />
 
     <Button

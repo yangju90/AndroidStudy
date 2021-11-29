@@ -20,6 +20,7 @@ import indi.mat.work.android.ui.intent.IntentActivity;
 import indi.mat.work.android.ui.launchmode.MainLaunchModeActivity;
 import indi.mat.work.android.ui.lifecycles.LifecyclesActivity;
 import indi.mat.work.android.ui.mvc.LiveDataActivity;
+import indi.mat.work.android.ui.room.RoomActivity;
 import indi.mat.work.android.ui.toolbar.ToolBarActivity;
 
 public class MainActivity extends BaseActivity {
@@ -78,17 +79,23 @@ public class MainActivity extends BaseActivity {
 
     public void clickToDrawerLayoutActivity(View view){
         DrawerLayoutActivity.actionStart(this, "", "");
-        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
+        Log.d(TAG, "clickToDrawerLayoutActivity: Jumped to!");
     }
 
     public void clickToLaunchModeActivity(View view){
         MainLaunchModeActivity.actionStart(this, "", "");
-        Log.d(TAG, "clickToToolBarActivity: Jumped to!");
+        Log.d(TAG, "clickToLaunchModeActivity: Jumped to!");
     }
 
 
     public void clickToLifecyclesActivity(View view){
         LifecyclesActivity.actionStart(this, "", "");
+        Log.d(TAG, "clickToLifecyclesActivity: Jumped to!");
+    }
+
+
+    public void clickToRoomActivity(View view){
+        RoomActivity.actionStart(this, "", "");
         Log.d(TAG, "clickToToolBarActivity: Jumped to!");
     }
 
